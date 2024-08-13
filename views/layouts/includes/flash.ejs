@@ -1,0 +1,27 @@
+<!-- only if success and success value exists then only show the success alerts -->
+<!-- success is actually an array so writing only success means empty array will also be counted success.length means array with > 0 value shud be satisfied -->
+
+<% if(success && success.length) { %>
+<div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+  <%= success %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %>
+
+<!-- same for error -->
+<% if(error && error.length) { %>
+  <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+    <%= success %>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  <% } %>
